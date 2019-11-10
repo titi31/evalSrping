@@ -1,9 +1,9 @@
 {
   "deploy": {
-    "goal": "hotelBooking"
+    "goal": "demo-0.0.1-SNAPSHOT.war"
   },
   "build": {
     "type": "maven",
-    "goal": "hotelBooking"
+    "goal": "demo-0.0.1-SNAPSHOT.war"
   }
 }
