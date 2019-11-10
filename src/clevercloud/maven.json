@@ -1,5 +1,9 @@
 {
   "deploy": {
     "goal": "hotelBooking"
+  },
+  "build": {
+    "type": "string",
+    "goal": "hotelBooking"
   }
 }
