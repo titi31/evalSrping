@@ -1,9 +1,9 @@
 {
   "deploy": {
-    "goal": "co.simplon.evaluation:demo"
+    "goal": "demo-0.0.1-SNAPSHOT.war"
   },
   "build": {
     "type": "maven",
-    "goal": "co.simplon.evaluation:demo"
+    "goal": "demo-0.0.1-SNAPSHOT.war"
   }
 }
