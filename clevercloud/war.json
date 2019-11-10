@@ -9,7 +9,7 @@
       {
         "file": "target/demo-0.0.1-SNAPSHOT.war",
         "context": "/demo-0.0.1-SNAPSHOT",
-        "checkMe": "/demo-0.0.1-SNAPSHOT"
+        "checkMe": "/demo-0.0.1-SNAPSHOT/"
       }
     ]
   }
