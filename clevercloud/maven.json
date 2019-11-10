@@ -1,9 +1,9 @@
 {
   "deploy": {
-    "goal": "install"
+    "goal": "-Pprofile-1 package"
   },
   "build": {
     "type": "maven",
-    "goal": "install"
+    "goal": "-Pprofile-1 package"
   }
 }
