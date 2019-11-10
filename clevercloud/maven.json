@@ -1,9 +1,9 @@
 {
   "deploy": {
-    "goal": "evalSrping34"
+    "goal": "-Dtest.active=false -Dexec.mainClass=\"co.simplon.evalutation.Main\" assembly:war-with-dependencies exec:java"
   },
   "build": {
     "type": "maven",
-    "goal": "evalSrping34"
+    "goal": "-Dtest.active=false -Dexec.mainClass=\"co.simplon.evaluation.Main\" assembly:war-with-dependencies exec:java"
   }
 }
