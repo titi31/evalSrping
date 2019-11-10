@@ -1,7 +1,7 @@
 {
   "build": {
     "type": "maven",
-    "goal": "install"
+    "goal": "package"
   },
   "deploy": {
     "container": "TOMCAT8",
