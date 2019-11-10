@@ -1,9 +1,0 @@
-{
-  "deploy": {
-    "goal": "../target"
-  },
-  "build": {
-    "type": "maven",
-    "goal": "../target"
-  }
-}

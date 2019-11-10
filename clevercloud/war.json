@@ -1,0 +1,16 @@
+{
+  "build": {
+    "type": "maven",
+    "goal": "package"
+  },
+  "deploy": {
+    "container": "TOMCAT8",
+    "war": [
+      {
+        "file": "target/demo-0.0.1-SNAPSHOT.war",
+        "context": "/demo-0.0.1-SNAPSHOT",
+        "checkMe": "/demo-0.0.1-SNAPSHOT"
+      }
+    ]
+  }
+}
