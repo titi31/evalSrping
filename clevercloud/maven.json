@@ -3,7 +3,7 @@
     "goal": "hotelBooking"
   },
   "build": {
-    "type": "string",
+    "type": "maven",
     "goal": "hotelBooking"
   }
 }
