@@ -1,9 +1,9 @@
 {
   "deploy": {
-    "goal": "demo-0.0.1-SNAPSHOT.war"
+    "goal": "evalSrping34"
   },
   "build": {
     "type": "maven",
-    "goal": "demo-0.0.1-SNAPSHOT.war"
+    "goal": "evalSrping34"
   }
 }
