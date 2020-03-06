@@ -13,30 +13,37 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
-
 import java.util.Random;
 import java.util.stream.Stream;
 
 @SpringBootApplication
-public class EvalSpringApplication implements CommandLineRunner {
+public class EvalSpringApplication implements CommandLineRunner 
+{
 	@Autowired
 	private CityRepositry cityRepositry;
 	@Autowired
 	private HotelRepository hotelRepository;
 	@Autowired
 	private RepositoryRestConfiguration restConfiguration;
-	public static void main(String[] args) {
+	
+	public static void main(String[] args) 
+	{
 		SpringApplication.run(EvalSpringApplication.class, args);
 	}
+	
 	@Override
-	public void run(String... args) throws Exception {
+	public void run(String... args) throws Exception 
+	{
 		restConfiguration.exposeIdsFor(City.class,Hotel.class);
 		cityRepositry.save(new City(null,"Toulouse",null));
 		cityRepositry.save(new City(null,"Paris",null));
 		cityRepositry.save(new City(null,"Besançon",null));
 		Random rnd = new Random();
-		cityRepositry.findAll().forEach(h -> {
-			for(int i=0;i<5;i++) {
+		
+		cityRepositry.findAll().forEach(h -> 
+		{
+			for(int i=0;i<5;i++) 
+			{
 				Hotel hotel = new Hotel();
 				hotel.setName(RandomString.make(8));
 				hotel.setSelected(rnd.nextBoolean());
@@ -50,14 +57,21 @@ public class EvalSpringApplication implements CommandLineRunner {
 			}
 		});
 
-	}@Bean
-	CommandLineRunner start(AccountService accountService){
-		return args -> {
+	}
+	
+	@Bean
+	CommandLineRunner start(AccountService accountService)
+	{
+		return args -> 
+		{
 			accountService.save(new AppRole(null,"USER"));
 			accountService.save(new AppRole(null,"ADMIN"));
-			Stream.of("user1","user2","user3","admin").forEach(un->{
+			
+			Stream.of("user1","user2","user3","admin").forEach(un->
+			{
 				accountService.saveUser(un,"1234","1234");
 			});
+			
 			accountService.addRoleToUser("admin","ADMIN");
 		};
 	}
