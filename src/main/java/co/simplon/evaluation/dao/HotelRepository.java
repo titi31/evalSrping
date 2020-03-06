@@ -6,19 +6,18 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
-
 import java.util.List;
 
 @CrossOrigin("*")
 @RepositoryRestResource
-public interface HotelRepository extends JpaRepository<Hotel,Long> {
+public interface HotelRepository extends JpaRepository<Hotel,Long> 
+{
+
   @RestResource(path="/selectedHotels")
-    public List<Hotel> findBySelectedIsTrue();
-    @RestResource(path="/hotelsByKeyword")
-    public List<Hotel> findByNameContains(@Param("mc") String mc);
-   /* @RestResource(path ="/promoHotels")
-    public List<Hotel> findByPromotionIsTrue();
-    @RestResource(path ="/dispoHotels")
-    public List<Hotel> findByAvailableIsTrue();*/
+  public List<Hotel> findBySelectedIsTrue();
+    
+  @RestResource(path="/hotelsByKeyword")
+  public List<Hotel> findByNameContains(@Param("mc") String mc);
+
 }
 
